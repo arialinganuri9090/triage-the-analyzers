@@ -33,6 +33,7 @@ public class UseCaseLock {
 
 
     public UseCaseLock() {
+        // Required by JPA
     }
 
     public boolean isLocked(Instant now) {

@@ -33,6 +33,7 @@ public class DocumentSectionLock {
 
 
     public DocumentSectionLock() {
+        // Required by JPA
     }
 
     public boolean isLocked(Instant now) {
