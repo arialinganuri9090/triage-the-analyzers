@@ -13,5 +13,9 @@
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
     <description>PMD quickstart, with Project Pulse's decisions.</description>
     <rule ref="rulesets/java/quickstart.xml">
+        <!-- D2: Entities keep an explicit no-arg constructor (backend/CLAUDE.md). If a second
+             constructor is added later, Java stops generating the default and JPA fails at runtime;
+             the explicit one prevents that. -->
+        <exclude name="UnnecessaryConstructor"/>
     </rule>
 </ruleset>
