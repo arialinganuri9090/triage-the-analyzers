@@ -2,7 +2,11 @@ package team.projectpulse.ram.requirement;
 
 import org.springframework.data.jpa.domain.Specification;
 
-public class RequirementArtifactSpecs {
+public final class RequirementArtifactSpecs {
+
+    private RequirementArtifactSpecs() {
+        // Static Specification factories only; not meant to be instantiated.
+    }
 
     public static Specification<RequirementArtifact> hasType(RequirementArtifactType type) {
         return (root, query, criteriaBuilder) -> criteriaBuilder.equal(root.get("type"), type);
