@@ -17,5 +17,9 @@
              constructor is added later, Java stops generating the default and JPA fails at runtime;
              the explicit one prevents that. -->
         <exclude name="UnnecessaryConstructor"/>
+        <!-- D4: SLF4J {} placeholders already defer formatting, and the only argument work in all
+             four findings is an O(1) getter (e.g. templates.size(), authentication.getName()), so a
+             guard adds noise and saves nothing. -->
+        <exclude name="GuardLogStatement"/>
     </rule>
 </ruleset>
