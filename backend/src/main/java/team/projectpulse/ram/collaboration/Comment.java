@@ -36,6 +36,7 @@ public class Comment {
 
 
     public Comment() {
+        // Required by JPA
     }
 
     public Long getId() {

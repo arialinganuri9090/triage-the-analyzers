@@ -6,9 +6,6 @@ public class RatingAverage {
     private Double averageScore;
 
 
-    public RatingAverage() {
-    }
-
     public RatingAverage(Integer criterionId, Double averageScore) {
         this.criterionId = criterionId;
         this.averageScore = averageScore;

@@ -33,12 +33,11 @@ public class UseCaseLock {
 
 
     public UseCaseLock() {
+        // Required by JPA
     }
 
     public boolean isLocked(Instant now) {
-        if (lockedAt == null) return false;
-        if (expiresAt == null) return true;
-        return expiresAt.isAfter(now);
+        return lockedAt != null && (expiresAt == null || expiresAt.isAfter(now));
     }
 
     public boolean isExpired(Instant now) {

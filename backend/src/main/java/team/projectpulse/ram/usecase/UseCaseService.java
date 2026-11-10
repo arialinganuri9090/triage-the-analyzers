@@ -248,12 +248,5 @@ public class UseCaseService {
         }
     }
 
-    private <T> void updateCollection(Set<T> oldCollection, Set<T> newCollection) {
-        oldCollection.clear();
-        if (newCollection != null) {
-            oldCollection.addAll(newCollection);
-        }
-    }
-
 }
 

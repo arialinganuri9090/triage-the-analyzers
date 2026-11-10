@@ -17,6 +17,7 @@ public class PeerEvaluationAverage {
 
 
     public PeerEvaluationAverage() {
+        // Used by EvaluationService, which fills in the fields through setters
     }
 
     public Integer getStudentId() {

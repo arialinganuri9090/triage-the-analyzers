@@ -7,4 +7,9 @@
 
      Unlike the baseline, this file may grow, but every entry is a reviewed decision. -->
 <FindBugsFilter>
+  <!-- D1: Every finding is a JPA association (Hibernate needs the managed reference, so a copy would
+       detach it), a Spring singleton injected through the constructor (backend/CLAUDE.md), or a DTO
+       built and serialized within one request. Nothing crosses a trust boundary, so a defensive copy
+       protects nothing and breaks JPA. -->
+  <Match><Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2"/></Match>
 </FindBugsFilter>
